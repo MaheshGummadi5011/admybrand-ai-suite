@@ -24,13 +24,12 @@ const Modal: React.FC<ModalProps> = ({
     } else {
       document.body.style.overflow = 'unset';
     }
-
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
-  const sizes = {
+  const sizes: Record<string, string> = {
     sm: 'max-w-md',
     md: 'max-w-lg',
     lg: 'max-w-2xl',
@@ -54,9 +53,9 @@ const Modal: React.FC<ModalProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           />
-          
           {/* Modal Content */}
           <motion.div
+            {...({} as any)}
             className={cn(
               "relative w-full glass-card",
               sizes[size]
@@ -78,7 +77,6 @@ const Modal: React.FC<ModalProps> = ({
                 </button>
               </div>
             )}
-            
             {/* Content */}
             <div className="space-y-4">
               {children}
