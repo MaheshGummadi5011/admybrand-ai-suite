@@ -7,7 +7,7 @@ import { Button } from '@/components/ui';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-float" />
@@ -22,6 +22,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="pt-8"
           >
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
               <Sparkles className="w-4 h-4 text-primary-400" />
@@ -78,17 +79,17 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">10K+</div>
-              <div className="text-white/60">Active Users</div>
+            <div className="text-center space-y-2">
+              <div className="text-3xl md:text-4xl font-bold gradient-text">10K+</div>
+              <div className="text-white/60 text-sm md:text-base">Active Users</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">500%</div>
-              <div className="text-white/60">ROI Increase</div>
+            <div className="text-center space-y-2">
+              <div className="text-3xl md:text-4xl font-bold gradient-text">500%</div>
+              <div className="text-white/60 text-sm md:text-base">ROI Increase</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">24/7</div>
-              <div className="text-white/60">AI Support</div>
+            <div className="text-center space-y-2">
+              <div className="text-3xl md:text-4xl font-bold gradient-text">24/7</div>
+              <div className="text-white/60 text-sm md:text-base">AI Support</div>
             </div>
           </motion.div>
         </div>
